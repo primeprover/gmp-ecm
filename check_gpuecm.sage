@@ -57,7 +57,6 @@ parser.add_argument('--quiet', '-q',
     action='store_const', const=0, dest='verbose',
     help='Suppress most output')
 
-args = parser.parse_args()
 
 
 # Currently GPU can only do param=3
@@ -305,6 +304,8 @@ def stage1Tests(N_size, prime_size, B1, param, num_curves, seed):
 
 if __name__ == '__main__':
     testInternal()
+
+    args = parser.parse_args()
 
     seed = args.seed
     if seed is None:

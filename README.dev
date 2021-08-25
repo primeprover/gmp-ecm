@@ -1,3 +1,22 @@
+Goal
+
+sigma:
+1000:   a*b
+1001:   a*c*d
+1002:   b*c
+
+# Should be able to pull out all 4 factors
+
+# 0 a*b
+# 1 a*c*d
+#       gcd(0, 1) => a
+#       0/a       => b
+#       1/a       => c*d
+# 2 b*c
+#       gcd(2, a) => 1
+#       gcd(2, b) => b
+#               2/b => c
+
 To use the autotools:
 
 $ libtoolize
